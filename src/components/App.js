@@ -1,6 +1,7 @@
 import React from "react";
+import ScrollableAnchor from 'react-scrollable-anchor'
 
-import Header from './Header';
+// import Header from './Header';
 import AboutMe from './AboutMe';
 import Skills from './Skills';
 import Projects from './Projects';
@@ -13,11 +14,33 @@ class App extends React.Component {
   render() {
     return (
       <div className={styles.container}>
-        <Header/>
-        <AboutMe/>
-        <Skills/>
-        <Projects/>
-        <Contact/>
+        {/* <Header/> */}
+        <div className={styles.header}>
+          <a href='#aboutMe'>
+            <div className={styles.headerText}>About Me</div>
+          </a>
+          <a href='#skills'>
+            <div className={styles.headerText}>Skills</div>  
+          </a>
+          <a href='#projects'>
+            <div className={styles.headerText}>Projects</div>  
+          </a>
+          <a href='#contact'>
+            <div className={styles.headerText}>Contact</div>  
+          </a>
+        </div>
+        <ScrollableAnchor id={'aboutMe'}>
+          <AboutMe />
+        </ScrollableAnchor>
+        <ScrollableAnchor id={'skills'}>
+          <Skills/>
+        </ScrollableAnchor>
+        <ScrollableAnchor id={'projects'}>
+          <Projects/>
+        </ScrollableAnchor>
+        <ScrollableAnchor id={'contact'}>
+          <Contact/>
+        </ScrollableAnchor>
       </div>
     )
   }
