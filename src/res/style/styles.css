@@ -43,21 +43,70 @@
 }
 
 .skillsDiv {
-  height: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
   width: 100%;
   color: #000000;
+  text-align: center;
+}
+
+.skillsTitle {
+  font-size: 40px;
+}
+
+.skillItemDiv {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.skillsSubTitle {
+  font-size: 20px;
+  margin-bottom: 12px;
+  margin-top: 30px;
 }
 
 .projectsDiv {
-  background-image: url('../images/aboutMe_back.jpg');
-  height: auto;
+  background-color: rgb(55, 25, 10);
   width: 100%;
   color: #ffffff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.projectsTitle {
+  text-align: center;
+  font-size: 40px;
+}
+
+.projectItemContainer {
+  border: 1px solid #ffffff;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contactDiv {
-  background-image: url('../images/aboutMe_back.jpg');
-  height: auto;
+  background-color: #ffffff;
+  /* height: auto; */
   width: 100%;
-  color: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.contactTitle {
+  font-size: 40px;
+}
+
+.contactFirstContent {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contactContent {
+  font-size: 20px;
 }
