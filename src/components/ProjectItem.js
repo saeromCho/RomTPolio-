@@ -9,15 +9,22 @@ class ProjectItem extends React.Component {
     }
   }
 
+  openUrl(url) {
+    window.open(url);
+  }
+
   render() {
-    const { title, content } = this.props;
+    const { title, duration, content, url } = this.props;
     return (
-      <div className={styles.projectItemContainer}>
-        <div>
-          제목 {title}
+      <div onClick={typeof url !== 'undefined' && url ? () => this.openUrl(url) : null}className={styles.projectItemContainer}>
+        <div className={styles.projectItemTitle}>
+          {title}
         </div>
-        <div>
-          내용 {content}
+        <div className={styles.projectItemDuration}>
+          개발기간 : {duration}
+        </div>
+        <div className={styles.projectItemContent}>
+          {content}
         </div>
       </div>
     )

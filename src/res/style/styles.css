@@ -67,7 +67,7 @@
 }
 
 .projectsDiv {
-  height: 100vh;
+  /* height: 100vh; */
   background-color: rgb(55, 25, 10);
   width: 100%;
   color: #ffffff;
@@ -88,6 +88,18 @@
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.projectItemTitle {
+  font-size: 30px;
+}
+
+.projectItemDuration {
+  font-size: 20px
+}
+
+.projectItemContent {
+  font-size: 24px;
 }
 
 .contactDiv {
