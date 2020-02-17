@@ -5,7 +5,6 @@ import AboutMe from './AboutMe';
 import Skills from './Skills';
 import Projects from './Projects';
 import Contact from './Contact';
-import Footer from './Footer';
 
 import styles from '../res/style/styles.css'
 
@@ -19,7 +18,6 @@ class App extends React.Component {
         <Skills/>
         <Projects/>
         <Contact/>
-        <Footer/>
       </div>
     )
   }

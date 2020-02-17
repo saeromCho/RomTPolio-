@@ -5,7 +5,17 @@ class Contact extends React.Component {
 
   render() {
     return (
-      <div className={styles.contactDiv}>Contact(기여운 이모지 넣을거임)</div>
+      <div className={styles.contactDiv}>
+        <div className={styles.contactTitle}>🙆‍♀️ Contact</div>
+        <div className={styles.contactContent}>
+          <div className={styles.contactFirstContent}>
+            📮 saerom.r.cho@gmail.com
+          </div>
+          <div>
+            📱 010.4172.3817
+          </div>
+        </div>
+      </div>
     )
   }
 }
