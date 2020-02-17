@@ -1,0 +1,41 @@
+.container {
+  width: 100%;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.introductionDiv {
+  background-image: url('../images/rom_first_background_image.jpg');
+  height: 100%;
+  width: 100%;
+  color: #ffffff;
+}
+
+.skillsDiv {
+  background-image: url('../images/rom_first_background_image.jpg');
+  height: 100%;
+  width: 100%;
+  color: #ffffff;
+}
+
+.projectsDiv {
+  background-image: url('../images/rom_first_background_image.jpg');
+  height: 100%;
+  width: 100%;
+  color: #ffffff;
+}
+
+.contactDiv {
+  background-image: url('../images/rom_first_background_image.jpg');
+  height: 100%;
+  width: 100%;
+  color: #ffffff;
+}
