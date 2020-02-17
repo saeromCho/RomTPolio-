@@ -1,5 +1,4 @@
 import React from 'react';
-import Typical from 'react-typical';
 import FadeIn from 'react-fade-in';
 
 import styles from '../res/style/styles.css';
@@ -32,7 +31,7 @@ class AboutMe extends React.Component {
           endAboutMeText: true,
         });
       }
-    },160);
+    },170);
   }
 
   render() {
@@ -41,7 +40,7 @@ class AboutMe extends React.Component {
       <div className={styles.aboutMeDiv}>
         <img className={styles.aboutImage} src={aboutMeBackgroundImage}/>
         <div className={styles.aboutMeWholeDiv}>
-          <div className={styles.aboutMeText}>
+          <div className={styles.aboutMeMainText}>
             {aboutMeText}
             {
               endAboutMeText && 
@@ -50,26 +49,16 @@ class AboutMe extends React.Component {
           </div>
           <div className={styles.aboutMeSubDiv}>
             {endAboutMeText && 
-              <FadeIn className={styles.aboutMeSubText} delay={3600}>
-                <div>잘하는 개발자, 믿고 맡길 수 있는 실력을 지닌 개발자가 되려고 노력합니다 🚀</div>
-                <div>발전과 🗣👂, UI, UX에도 관심이 많은 사람 👀</div>
-                <div>저와 함께하는 동료들 💃, 즉 ❗️, 저와 함께 길을 가고 있는 '사람'이 제일 중요한 개발자입니다 👫</div>
+              <FadeIn className={styles.aboutMeSubText} delay={3200}>
+                <div>잘하는 개발자, 믿고 맡길 수 있는 실력을 지닌 개발자가 되려고 노력합니다🚀</div>
+                <div>발전과 성장🗣👂에 에너지를 얻는 사람🔋,</div>
+                <div>개발자이지만 UI, UX에 예민한 관심을 보이는 사람👀</div>
+                <div>저와 함께하는 동료들💃,</div>
+                <div>즉❗️,</div>
+                <div>저와 함께 길을 가고 있는 '사람'이 제일 중요한 개발자입니다👫</div>
               </FadeIn>
             }
           </div>
-          {/* <Typical
-            steps={['안녕하세요, Developer 조새롬의 포트폴리오 입니다.']}
-            wrapper="p"
-            className={styles.aboutMeText}
-          /> */}
-          
-          
-          {/* {aboutMeText} */}
-          {/* <Typical
-            steps={['안녕하세요, Developer 조새롬의 포트폴리오 입니다.', 2400, '잘하는 개발자, 믿고 맡길 수 있는 실력을 지닌 개발자가 되려고 노력합니다 🚀', 2400, '발전과 🗣👂, UI, UX에도 관심이 많은 사람 👀', 1800, '저와 함께하는 동료들 💃🕺. 즉 ❗️, 저와 함께 길을 가고 있는 \'사람\'이 제일 중요한 개발자입니다 👫', 3000]}
-            wrapper="p"
-            className={styles.aboutMeText}
-          /> */}
         </div>
       </div>
     )
