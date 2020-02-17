@@ -67,7 +67,6 @@
 }
 
 .projectsDiv {
-  /* height: 100vh; */
   background-color: rgb(55, 25, 10);
   width: 100%;
   color: #ffffff;
@@ -82,7 +81,6 @@
 
 .projectItemContainer {
   border: 1px solid #ffffff;
-  padding: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
   width: 50%;
@@ -91,21 +89,49 @@
 }
 
 .projectItemTitle {
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .projectItemDuration {
-  font-size: 20px
+  font-size: 16px
 }
 
 .projectItemContent {
-  font-size: 24px;
+  font-size: 16px;
+}
+
+.projectItemWholeDiv {
+  display: flex;
+}
+
+.projectItemImageDiv {
+  width: 30%;
+}
+
+.projectItemImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projectItemContentDiv {
+  padding: 20px;
+  width: 70%;
+}
+
+.projectItemContainerPointerAbled {
+  border: 1px solid #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
 }
 
 .contactDiv {
   height: 100vh;
   background-color: #ffffff;
-  /* height: auto; */
   width: 100%;
   color: #000000;
   text-align: center;
