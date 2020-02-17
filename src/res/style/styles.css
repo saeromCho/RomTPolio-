@@ -20,11 +20,15 @@
 }
 
 .aboutMeDiv {
-  background-image: url('../images/aboutMe_back.jpg');
   height: 100vh;
   color: #ffffff;
   width: 100%;
-  background-size: cover;
+}
+
+.aboutImage {
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
 }
 
 .aboutMeWholeDiv {
@@ -39,10 +43,9 @@
 }
 
 .skillsDiv {
-  background-image: url('../images/aboutMe_back.jpg');
   height: auto;
   width: 100%;
-  color: #ffffff;
+  color: #000000;
 }
 
 .projectsDiv {
