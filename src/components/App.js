@@ -1,7 +1,7 @@
 import React from "react";
 
 import Header from './Header';
-import Introduction from './Introduction';
+import AboutMe from './AboutMe';
 import Skills from './Skills';
 import Projects from './Projects';
 import Contact from './Contact';
@@ -15,7 +15,7 @@ class App extends React.Component {
     return (
       <div className={styles.container}>
         <Header/>
-        <Introduction/>
+        <AboutMe/>
         <Skills/>
         <Projects/>
         <Contact/>
