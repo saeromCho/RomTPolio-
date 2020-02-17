@@ -5,7 +5,12 @@ class Header extends React.Component {
 
   render() {
     return (
-      <div className={styles.header}>Header(기여운 이모지 넣을거임)</div>
+      <div className={styles.header}>
+        <div className={styles.headerText}>About Me</div>
+        <div className={styles.headerText}>Skills</div>
+        <div className={styles.headerText}>Projects</div>
+        <div className={styles.headerText}>Contact</div>
+      </div>
     )
   }
 }
