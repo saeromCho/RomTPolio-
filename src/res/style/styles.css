@@ -33,7 +33,14 @@
 
 .aboutMeWholeDiv {
   position: absolute;
-  top: 45%;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+}
+
+.aboutMeSubDiv {
+  position: absolute;
+  top: 85%;
   width: 100%;
   text-align: center;
 }
