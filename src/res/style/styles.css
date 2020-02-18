@@ -33,6 +33,15 @@ body	{
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Sriracha';
+  src:url('../fonts/Nanum-Square-Regular.woff') format('woff'),
+      url('../fonts/Nanum-Square-Regular.eot'),
+      url('../fonts/Nanum-Square-Regular.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
 .myNameBackground {
   color: #FFFAD7;
   position: absolute;
