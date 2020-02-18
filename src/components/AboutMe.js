@@ -16,13 +16,13 @@ class AboutMe extends React.Component {
 
   componentDidMount() {
     let i = 0;
-    const typing = setInterval(() =>{
+    const typing = setInterval(() => {
       const { aboutMeText } = this.state;
-      const finalText= "안녕하세요, Developer 조새롬의 포트폴리오 입니다 ";
+      const endText = "Developer, saerom Cho's Portpolio";
 
-      if(i<finalText.length) { 
+      if(i < endText.length) { 
         this.setState ({
-          aboutMeText: aboutMeText + finalText[i],
+          aboutMeText: aboutMeText + endText[i],
         });
         i++
       } else {
@@ -41,7 +41,9 @@ class AboutMe extends React.Component {
         <img className={styles.aboutImage} src={aboutMeBackgroundImage}/>
         <div className={styles.aboutMeWholeDiv}>
           <div className={styles.aboutMeMainText}>
-            {aboutMeText}
+            <span className={styles.aboutMeMyNameText}>
+              {aboutMeText}
+            </span>
             {
               endAboutMeText && 
               <span className={styles.aboutMeTextEndDot}>.</span>
@@ -49,13 +51,11 @@ class AboutMe extends React.Component {
           </div>
           <div className={styles.aboutMeSubDiv}>
             {endAboutMeText && 
-              <FadeIn className={styles.aboutMeSubText} delay={3200}>
-                <div>잘하는 개발자, 믿고 맡길 수 있는 실력을 지닌 개발자가 되려고 노력합니다🚀</div>
-                <div>발전과 성장🗣👂에 에너지를 얻는 사람🔋,</div>
-                <div>개발자이지만 UI, UX에 예민한 관심을 보이는 사람👀</div>
-                <div>저와 함께하는 동료들💃,</div>
-                <div>즉❗️,</div>
-                <div>저와 함께 길을 가고 있는 '사람'이 제일 중요한 개발자입니다👫</div>
+              <FadeIn className={styles.aboutMeSubText} delay={2500}>
+                <div>잘하는 개발자가 되려고 노력합니다.</div>
+                <div>발전과 성장에 에너지를 얻는 사람.</div>
+                <div>개발자이지만 UI, UX에 예민한 관심을 보이는 사람.</div>
+                <div>저와 함께 길을 가고 있는 '사람'이 제일 중요한 개발자입니다.</div>
               </FadeIn>
             }
           </div>
