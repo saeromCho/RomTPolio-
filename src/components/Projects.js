@@ -1,8 +1,10 @@
 import React from 'react';
+import { isMobile } from 'react-device-detect';
 
 import ProjectItem from './ProjectItem';
 
 import styles from '../res/style/styles.css';
+import mobileStyles from '../res/style/mobileStyles.css';
 
 import talkenImage from '../res/images/talken_proj.jpg';
 import colligenceImage from '../res/images/colligence_proj.jpg';
@@ -15,8 +17,8 @@ class Project extends React.Component {
 
   render() {
     return (
-      <div className={styles.projectsDiv}>
-        <div className={styles.projectsTitle}>
+      <div className={isMobile ? mobileStyles.projectsDiv : styles.projectsDiv}>
+        <div className={isMobile ? mobileStyles.projectsTitle : styles.projectsTitle}>
           📑 Projects
         </div>
         <div>

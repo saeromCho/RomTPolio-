@@ -1,14 +1,17 @@
 import React from 'react';
+import { isMobile } from 'react-device-detect';
+
 import styles from '../res/style/styles.css';
+import mobileStyles from '../res/style/mobileStyles.css';
 
 class Contact extends React.Component {
 
   render() {
     return (
-      <div className={styles.contactDiv}>
-        <div className={styles.contactTitle}>🙆‍♀️ Contact</div>
-        <div className={styles.contactContent}>
-          <div className={styles.contactFirstContent}>
+      <div className={isMobile ? mobileStyles.contactDiv : styles.contactDiv}>
+        <div className={isMobile ? mobileStyles.contactTitle : styles.contactTitle}>🙆‍♀️ Contact</div>
+        <div className={isMobile ? mobileStyles.contactContent : styles.contactContent}>
+          <div className={isMobile ? mobileStyles.contactFirstContent : styles.contactFirstContent}>
             <a target="_neww" href="mailto:📮 saerom.r.cho@gmail.com">📮 saerom.r.cho@gmail.com</a>
           </div>
           <div>

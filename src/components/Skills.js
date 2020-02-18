@@ -1,8 +1,10 @@
 import React from 'react';
+import { isMobile } from 'react-device-detect';
 
 import SkillItem from './SkillItem';
 
 import styles from '../res/style/styles.css';
+import mobileStyles from '../res/style/mobileStyles.css';
 
 import reactImage from '../res/images/react_image.png';
 import html5Image from '../res/images/html5_image.png';
@@ -27,11 +29,11 @@ class Skills extends React.Component {
 
   render() {
     return (
-      <div className={styles.skillsDiv}>
-        <div className={styles.myNameBackground}>
+      <div className={isMobile ? mobileStyles.skillsDiv : styles.skillsDiv}>
+        <div className={isMobile ? mobileStyles.myNameBackground : styles.myNameBackground}>
           saerom Cho
         </div>
-        <div className={styles.skillsTitle}>
+        <div className={isMobile ? mobileStyles.skillsTitle : styles.skillsTitle}>
           💃 My Skills
         </div>
         <div className={styles.skillsWholeDiv}>

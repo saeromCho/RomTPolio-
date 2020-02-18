@@ -1,0 +1,242 @@
+.hamburgerMenu {
+  position: absolute!important;
+  top: 15;
+  right: 15;
+}
+
+.aboutMeWholeDiv {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+}
+
+.aboutMeTextEndDot {
+  animation-iteration-count: 2;
+  color: rgb(229, 255, 0);
+  /* font-size: 2.6em; */
+  letter-spacing: 10px;
+  animation: text-flicker 3s linear infinite;
+}
+
+.aboutMeMainText {
+  color: rgb(229, 255, 0);
+  font-size: 2.4em;
+  letter-spacing: 8px;
+  animation: text-flicker 3s linear infinite;
+  word-break: break-word; 
+}
+
+.aboutMeSubText {
+  text-align: left;
+  font-size: 0.9em;
+  line-height: 2.3em;
+  letter-spacing: 0.1em;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  word-break: keep-all;
+}
+
+.aboutMeSubDiv {
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+@keyframes text-flicker {
+  0% {
+    opacity:0.1;
+    text-shadow: 0px 0px 18px rgba(247, 252, 109, 1);
+  }
+  
+  2% {
+    opacity:1;
+    text-shadow: 0px 0px 18px rgba(247, 252, 109, 1);
+  }
+  8% {
+    opacity:0.1;
+    text-shadow: 0px 0px 18px rgba(247, 252, 109, 1);
+  }
+  9% {
+    opacity:1;
+    text-shadow: 0px 0px 18px rgba(247, 252, 109, 1);
+  }
+  12% {
+    opacity:0.1;
+    text-shadow: 0px 0px rgba(247, 252, 109, 1);
+  }
+  20% {
+    opacity:1;
+    text-shadow: 0px 0px 18px rgba(247, 252, 109, 1);
+  }
+  25% {
+    opacity:0.3;
+    text-shadow: 0px 0px 18px rgba(247, 252, 109, 1);
+  }
+  30% {
+    opacity:1;
+    text-shadow: 0px 0px 18px rgba(247, 252, 109, 1);
+  }
+  
+  70% {
+    opacity:0.7;
+    text-shadow: 0px 0px 18px rgba(247, 252, 109, 1);
+  }
+  
+  72% {
+    opacity:0.2;
+    text-shadow:0px 0px 18px rgba(247, 252, 109, 1);
+  }
+  
+  77% {
+    opacity:.9;
+    text-shadow: 0px 0px 18px rgba(247, 252, 109, 1);
+  }
+  100% {
+    opacity:.9;
+    text-shadow: 0px 0px 18px rgba(247, 252, 109, 1);
+  }
+}
+
+.skillsDiv {
+  padding-top: 120px;
+  padding-bottom: 44px;
+  width: 100%;
+  color: #000000;
+  text-align: center;
+}
+
+.myNameBackground {
+  color: #FFFAD7;
+  position: absolute;
+  font-size: 4.2em;
+  width: 100%;
+  text-align: center;
+  font-family: 'Sriracha';
+  font-weight: lighter;
+  margin-top: -100px;
+  z-index: -1;
+}
+
+.skillsTitle {
+  font-family: 'Helvetica';
+  font-size: 40px;
+  text-align: center;
+  /* padding-top: 36px; */
+  margin-top: -34px;
+  font-size: 1.5em;
+}
+
+.skillsSubTitle {
+  margin-bottom: 20px;
+  border: 1px solid #000000;
+  display: inline-block;
+  border-radius: 30px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-weight: lighter;
+  font-size: 0.8em;
+  margin-top: 30px;
+}
+
+.skillItemImageDiv {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: block;
+}
+
+.skillItemImage {
+  width: 11%;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+.projectsDiv {
+  background-color: #67482e;
+  /* rgb(55, 25, 10); */
+  width: 100%;
+  color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.projectsTitle {
+  font-family: 'Helvetica';
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 40px;
+}
+
+.projectItemContainer {
+  border: 1px solid #ffffff;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 76%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projectItemContainerPointerAbled {
+  border: 1px solid #ffffff;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 76%;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.projectItemWholeDiv {
+  display: flex;
+  height: 130px;
+}
+
+.projectItemTitle {
+  font-size: 0.8em;
+}
+
+.projectItemDuration {
+  font-size: 0.4em;
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
+
+.projectItemContent {
+  font-size: 0.5em;
+  height: 74px;
+}
+
+.contactDiv {
+  background-color: #ffffff;
+  width: 100%;
+  color: #000000;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.contactTitle {
+  font-family: 'Helvetica';
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.contactFirstContent {
+  margin-bottom: 4px;
+}
+
+.contactFirstContent > a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.contactContent {
+  font-family: 'Helvetica';
+  font-size: 0.9em;
+}

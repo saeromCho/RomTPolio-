@@ -1,7 +1,9 @@
 import React from 'react';
 import FadeIn from 'react-fade-in';
+import { isMobile } from 'react-device-detect';
 
 import styles from '../res/style/styles.css';
+import mobileStyles from '../res/style/mobileStyles.css';
 
 import aboutMeBackgroundImage from '../res/images/about_me_background.jpg';
 
@@ -39,19 +41,19 @@ class AboutMe extends React.Component {
     return (
       <div className={styles.aboutMeDiv}>
         <img className={styles.aboutImage} src={aboutMeBackgroundImage}/>
-        <div className={styles.aboutMeWholeDiv}>
-          <div className={styles.aboutMeMainText}>
+        <div className={isMobile ? mobileStyles.aboutMeWholeDiv : styles.aboutMeWholeDiv}>
+          <div className={isMobile ? mobileStyles.aboutMeMainText : styles.aboutMeMainText}>
             <span className={styles.aboutMeMyNameText}>
               {aboutMeText}
             </span>
             {
               endAboutMeText && 
-              <span className={styles.aboutMeTextEndDot}>.</span>
+              <span className={isMobile ? mobileStyles.aboutMeTextEndDot : styles.aboutMeTextEndDot}>.</span>
             }
           </div>
-          <div className={styles.aboutMeSubDiv}>
+          <div className={isMobile ? mobileStyles.aboutMeSubDiv : styles.aboutMeSubDiv}>
             {endAboutMeText && 
-              <FadeIn className={styles.aboutMeSubText} delay={2500}>
+              <FadeIn className={isMobile ? mobileStyles.aboutMeSubText : styles.aboutMeSubText} delay={2500}>
                 <div>잘하는 개발자가 되려고 노력합니다.</div>
                 <div>발전과 성장에 에너지를 얻는 사람.</div>
                 <div>개발자이지만 UI, UX에 예민한 관심을 보이는 사람.</div>
