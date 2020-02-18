@@ -132,15 +132,19 @@
 }
 
 .projectItemDuration {
-  font-size: 16px
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .projectItemContent {
   font-size: 16px;
+  height: 74px;
 }
 
 .projectItemWholeDiv {
   display: flex;
+  height: 200px;
 }
 
 .projectItemImageDiv {
@@ -156,6 +160,10 @@
 .projectItemContentDiv {
   padding: 20px;
   width: 70%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .projectItemContainerPointerAbled {

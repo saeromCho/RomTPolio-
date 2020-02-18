@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from '../res/style/styles.css';
 
-import aboutMeBackgroundImage from '../res/images/about_me_background.jpg';
 
 class ProjectItem extends React.Component {
   constructor(props) {
@@ -16,14 +15,14 @@ class ProjectItem extends React.Component {
   }
 
   render() {
-    const { title, duration, content, url } = this.props;
+    const { title, duration, content, url, image } = this.props;
     return (
       <div
         onClick={typeof url !== 'undefined' && url ? () => this.openUrl(url) : null}
         className={typeof url !== 'undefined' && url ? styles.projectItemContainerPointerAbled : styles.projectItemContainer}>
         <div className={styles.projectItemWholeDiv}>
           <div className={styles.projectItemImageDiv}>
-            <img className={styles.projectItemImage} src={aboutMeBackgroundImage}/>
+            <img className={styles.projectItemImage} src={image}/>
           </div>
           <div className={styles.projectItemContentDiv}>
             <div className={styles.projectItemTitle}>
