@@ -100,7 +100,7 @@
 }
 
 .skillsDiv {
-  padding-top: 120px;
+  padding-top: 110px;
   padding-bottom: 44px;
   width: 100%;
   color: #000000;
@@ -126,6 +126,7 @@
   /* padding-top: 36px; */
   margin-top: -34px;
   font-size: 1.5em;
+  margin-bottom: 16px;
 }
 
 .skillsSubTitle {
@@ -139,7 +140,7 @@
   padding-bottom: 4px;
   font-weight: lighter;
   font-size: 0.8em;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .skillItemImageDiv {
