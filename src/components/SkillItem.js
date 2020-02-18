@@ -7,15 +7,16 @@ class SkillItem extends React.Component {
   }
 
   render() {
-    const { subTitle, content } = this.props;
+    const { subTitle, images } = this.props;
     return (
       <div className={styles.skillItemDiv}>
         <div className={styles.skillsSubTitle}>
          {subTitle}
         </div>
-        <div>
-          {content}
-          {/* React, HTML5, CSS3 */}
+        <div className={styles.skillItemImageDiv}>
+          {images.map((item, index) => {
+            return <img key={index} className={styles.skillItemImage} src={item}/>
+          })}
         </div>
       </div>
     )
