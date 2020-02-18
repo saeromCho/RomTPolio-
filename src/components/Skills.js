@@ -14,6 +14,7 @@ import reactNativeImage from '../res/images/react-native_image.png';
 import nodeJsImage from '../res/images/node_js_image.png';
 import javaImage from '../res/images/java_image.png';
 import mySqlImage from '../res/images/mysql_image.png';
+import nginxImage from '../res/images/nginx_image.png';
 import cImage from '../res/images/c_image.png';
 import phpImage from '../res/images/php_image.png';
 import cSharpImage from '../res/images/c_sharp_image.png';
@@ -51,7 +52,7 @@ class Skills extends React.Component {
           />
           <SkillItem
             subTitle={'Experience'}
-            images={[cImage, phpImage, cSharpImage, springImage, mariaDbImage]}
+            images={[nginxImage, cImage, phpImage, cSharpImage, springImage, mariaDbImage]}
           />
           <SkillItem
             subTitle={'Tools'}

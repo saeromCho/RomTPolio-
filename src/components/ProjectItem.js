@@ -8,9 +8,6 @@ import mobileStyles from '../res/style/mobileStyles.css';
 class ProjectItem extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-    }
   }
 
   openUrl(url) {
