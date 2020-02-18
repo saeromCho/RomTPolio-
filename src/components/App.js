@@ -1,7 +1,6 @@
 import React from "react";
 import ScrollableAnchor from 'react-scrollable-anchor'
 
-// import Header from './Header';
 import AboutMe from './AboutMe';
 import Skills from './Skills';
 import Projects from './Projects';
@@ -14,7 +13,6 @@ class App extends React.Component {
   render() {
     return (
       <div className={styles.container}>
-        {/* <Header/> */}
         <div className={styles.header}>
           <a href='#aboutMe'>
             <div className={styles.headerText}>About Me</div>

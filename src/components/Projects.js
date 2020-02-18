@@ -43,7 +43,7 @@ class Project extends React.Component {
           />
           <ProjectItem
             title={'AOS 게임 App, 『고양이 상자에는 마법이 담겨있나요?』'}
-            duration={'2018.09 ~ ing'}
+            duration={'2018.01 ~ 2018.06'}
             content={'Unity3D + C# + Firebase를 이용한 UI, 인게임 화면 개발 및 게임에 필요한 기능 및 Method 구현, Spine Animation Object 적용'}
             url={'https://play.google.com/store/apps/details?id=com.studiomalt.catboxmagic&hl=ko'}
             image={catBoxImage}

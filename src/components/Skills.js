@@ -28,6 +28,9 @@ class Skills extends React.Component {
   render() {
     return (
       <div className={styles.skillsDiv}>
+        <div className={styles.myNameBackground}>
+          saerom Cho
+        </div>
         <div className={styles.skillsTitle}>
           💃 My Skills
         </div>
