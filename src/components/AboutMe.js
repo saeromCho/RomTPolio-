@@ -17,28 +17,36 @@ class AboutMe extends React.Component {
   }
 
   componentDidMount() {
+    const { endAboutMeText } = this.state;
     let i = 0;
-    const typing = setInterval(() => {
-      const { aboutMeText } = this.state;
-      const endText = "Developer, saerom Cho's Portpolio";
+    const timeoutAboutMe = setTimeout(() => {
+      const intervalAboutMe = setInterval(() => {
+        const { aboutMeText } = this.state;
+        const finalText = "Developer, saerom Cho's Portpolio";
 
-      if(i < endText.length) { 
-        this.setState ({
-          aboutMeText: aboutMeText + endText[i],
-        });
-        i++
-      } else {
-        clearInterval(typing);
-        this.setState({
-          endAboutMeText: true,
-        });
-      }
-    },isMobile ? 140 : 170);
+        if(i < finalText.length) { 
+          this.setState ({
+            aboutMeText: aboutMeText + finalText[i],
+          });
+          i++
+        } else {
+          clearTimeout(timeoutAboutMe);
+          clearInterval(intervalAboutMe);
+          if (!endAboutMeText) {
+            this.setState({
+              endAboutMeText: true,
+            });
+            return;
+          }
+          return;
+        }
+      },isMobile ? 140 : 170);
+    }, 1000)
   }
 
   render() {
     const { aboutMeText, endAboutMeText } = this.state;
-    let aboutMeTextStyle;;
+    let aboutMeTextStyle;
 
     if (endAboutMeText) {
       if (isMobile) {
@@ -68,7 +76,7 @@ class AboutMe extends React.Component {
           </div>
           <div className={isMobile ? mobileStyles.aboutMeSubDiv : styles.aboutMeSubDiv}>
             {endAboutMeText && 
-              <FadeIn className={isMobile ? mobileStyles.aboutMeSubText : styles.aboutMeSubText} delay={isMobile ? 1400 : 2400}>
+              <FadeIn className={isMobile ? mobileStyles.aboutMeSubText : styles.aboutMeSubText} delay={isMobile ? 1400 : 2200}>
                 <div>잘하는 개발자가 되려고 노력합니다.</div>
                 <div>발전과 성장에 에너지를 얻는 사람.</div>
                 <div>개발자이지만 UI, UX에 예민한 관심을 보이는 사람.</div>
