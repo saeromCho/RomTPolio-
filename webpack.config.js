@@ -1,11 +1,19 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const mode = process.env.NODE_ENV || 'development';
 
 module.exports = {
   entry : './src/index',
   resolve: {
     extensions: [".js", ".jsx"]
+  },
+  devtool: (mode === 'development') ? 'inline-source-map' : false,
+  mode: mode,
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
   },
 
   module: {
