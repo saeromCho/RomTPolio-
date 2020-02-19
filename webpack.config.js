@@ -91,13 +91,13 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
     // mode: "development",
   },
   
   devServer: {
-    contentBase: path.join(__dirname, "dist"), // 이 경로에 있는 파일이 변경될 때 번들을 다시 컴파일
+    contentBase: path.join(__dirname, "build"), // 이 경로에 있는 파일이 변경될 때 번들을 다시 컴파일
     compress: true,
     port: 8080,//각자의 portNumber 작성
   },
