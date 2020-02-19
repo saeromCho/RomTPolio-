@@ -1,20 +1,35 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const mode = process.env.NODE_ENV || 'development';
+// const ImageminPlugin = require('imagemin-webpack-plugin').default;
+// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry : './src/index',
   resolve: {
     extensions: [".js", ".jsx"]
   },
-  devtool: (mode === 'development') ? 'inline-source-map' : false,
-  mode: mode,
+  devtool: 'source-map',
+  cache: true,
+  mode: "production",
   performance: {
     hints: false,
     maxEntrypointSize: 512000,
     maxAssetSize: 512000
   },
+  optimization: {
+    minimize: true,
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all'
+        }
+      }
+    }
+  }, 
 
   module: {
     rules: [
@@ -81,6 +96,14 @@ module.exports = {
   },
 
   plugins: [
+    // new ImageminPlugin({
+    //   // disable: process.env.NODE_ENV !== 'production', // Disable during development
+    //   disable: false,
+    //   pngquant: {
+    //     quality: '95'// quality: '95-100'
+    //   }
+    // }),
+    // new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: `./public/index.html`
     }),
