@@ -68,7 +68,7 @@ class AboutMe extends React.Component {
           </div>
           <div className={isMobile ? mobileStyles.aboutMeSubDiv : styles.aboutMeSubDiv}>
             {endAboutMeText && 
-              <FadeIn className={isMobile ? mobileStyles.aboutMeSubText : styles.aboutMeSubText} delay={isMobile ? 1400 : 2500}>
+              <FadeIn className={isMobile ? mobileStyles.aboutMeSubText : styles.aboutMeSubText} delay={isMobile ? 1400 : 2200}>
                 <div>잘하는 개발자가 되려고 노력합니다.</div>
                 <div>발전과 성장에 에너지를 얻는 사람.</div>
                 <div>개발자이지만 UI, UX에 예민한 관심을 보이는 사람.</div>
