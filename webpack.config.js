@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   entry : './src/index',
@@ -19,6 +20,25 @@ module.exports = {
   },
   optimization: {
     minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          parse: {
+            ecma: 8,
+          },
+          compress: {
+            ecma: 5,
+            warnings: false,
+            comparisons: false,
+            inline: 2,
+          },
+        },
+        parallel: true,
+        // Enable file caching
+        cache: true,
+        sourceMap: true,
+      }),
+    ],
     runtimeChunk: 'single',
     splitChunks: {
       cacheGroups: {
@@ -105,7 +125,19 @@ module.exports = {
     // }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: `./public/index.html`
+      template: `./public/index.html`,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true,
+      },
     }),
     new MiniCssExtractPlugin({ filename: 'css/styles.css' }),
   ]

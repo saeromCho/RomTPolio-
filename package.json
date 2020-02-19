@@ -17,6 +17,7 @@
     "react-dom": "^16.12.0",
     "react-fade-in": "^0.1.8",
     "react-scrollable-anchor": "^0.6.1",
+    "terser-webpack-plugin": "^2.3.5",
     "url-loader": "^3.0.0",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11"
