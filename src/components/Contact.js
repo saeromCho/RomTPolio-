@@ -4,6 +4,8 @@ import { isMobile } from 'react-device-detect';
 import styles from '../res/style/styles.css';
 import mobileStyles from '../res/style/mobileStyles.css';
 
+import gitImage from '../res/images/git_image.png';
+
 class Contact extends React.Component {
 
   render() {
@@ -16,6 +18,11 @@ class Contact extends React.Component {
           </div>
           <div>
             📱 010.4172.3817
+          </div>
+          <div className={isMobile ? mobileStyles.contactGitImageDiv : styles.contactGitImageDiv}>
+            <a href={"https://github.com/saeromCho/RomTPolio-"} target="_new">
+              <img className={styles.contactGitImage} src={gitImage} />
+            </a>
           </div>
         </div>
       </div>
