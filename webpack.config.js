@@ -2,14 +2,14 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // const ImageminPlugin = require('imagemin-webpack-plugin').default;
-// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry : './src/index',
   resolve: {
     extensions: [".js", ".jsx"]
   },
-  // devtool: 'source-map',
+  devtool: 'source-map',
   cache: true,
   mode: "production",
   performance: {
@@ -103,7 +103,7 @@ module.exports = {
     //     quality: '95'// quality: '95-100'
     //   }
     // }),
-    // new CleanWebpackPlugin(),
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: `./public/index.html`
     }),
