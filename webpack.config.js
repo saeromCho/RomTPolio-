@@ -9,6 +9,7 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx"]
   },
+  // devtool: 'source-map',
   cache: true,
   mode: "production",
   performance: {
@@ -18,16 +19,16 @@ module.exports = {
   },
   optimization: {
     minimize: true,
-    // runtimeChunk: 'single',
-    // splitChunks: {
-    //   cacheGroups: {
-    //     commons: {
-    //       test: /[\\/]node_modules[\\/]/,
-    //       name: 'vendors',
-    //       chunks: 'all'
-    //     }
-    //   }
-    // }
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all'
+        }
+      }
+    }
   }, 
 
   module: {
