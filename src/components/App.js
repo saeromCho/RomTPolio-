@@ -13,6 +13,7 @@ import styles from '../res/style/styles.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
+    window.scrollTo(0, 0);
   }
 
   
