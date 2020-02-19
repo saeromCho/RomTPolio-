@@ -17,33 +17,34 @@ class App extends React.Component {
 
   
 
-  renderHeaderMenu() {
+  renderAppComponent() {
     if (isMobile) {
-      return null;
+      return (
+        <div>
+          <AboutMe />
+          <Skills/>
+          <Projects/>
+          <Contact/>
+        </div>
+      );
     }
 
     return (
-      <div className={styles.header}>
-        <a href='#aboutMe'>
-          <div className={styles.headerText}>About Me</div>
-        </a>
-        <a href='#skills'>
-          <div className={styles.headerText}>Skills</div>  
-        </a>
-        <a href='#projects'>
-          <div className={styles.headerText}>Projects</div>  
-        </a>
-        <a href='#contact'>
-          <div className={styles.headerText}>Contact</div>  
-        </a>
-      </div>
-    )
-  }
-
-  render() {
-    return (
-      <div className={styles.container}>
-        {this.renderHeaderMenu()}
+      <div>
+        <div className={styles.header}>
+          <a href='#aboutMe'>
+            <div className={styles.headerText}>About Me</div>
+          </a>
+          <a href='#skills'>
+            <div className={styles.headerText}>Skills</div>  
+          </a>
+          <a href='#projects'>
+            <div className={styles.headerText}>Projects</div>  
+          </a>
+          <a href='#contact'>
+            <div className={styles.headerText}>Contact</div>  
+          </a>
+        </div>
         <ScrollableAnchor id={'aboutMe'}>
           <AboutMe />
         </ScrollableAnchor>
@@ -56,6 +57,14 @@ class App extends React.Component {
         <ScrollableAnchor id={'contact'}>
           <Contact/>
         </ScrollableAnchor>
+      </div>
+    )
+  }
+
+  render() {
+    return (
+      <div className={styles.container}>
+        {this.renderAppComponent()}
       </div>
     )
   }
