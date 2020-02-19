@@ -10,7 +10,7 @@ import talkenImage from '../res/images/talken_proj.jpg';
 import colligenceImage from '../res/images/colligence_proj.jpg';
 import drftsTzImage from '../res/images/drfts_proj.jpg';
 import drftsAppImage from '../res/images/drfts_ios_proj.jpg';
-import catBoxImage from '../res/images/catBox_proj.jpg';
+import catBoxImage from '../res/images/catbox_proj.jpg';
 import juvisImage from '../res/images/juvis_proj.jpg';
 
 class Project extends React.Component {
