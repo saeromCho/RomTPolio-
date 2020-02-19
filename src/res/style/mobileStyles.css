@@ -22,6 +22,15 @@
   color: rgb(229, 255, 0);
   font-size: 2.4em;
   letter-spacing: 8px;
+  /* animation: text-flicker 3s linear infinite; */
+  word-break: break-word; 
+  text-shadow: 0px 0px 18px rgba(247, 252, 109, 1);
+}
+
+.aboutMeMainTextFin {
+  color: rgb(229, 255, 0);
+  font-size: 2.4em;
+  letter-spacing: 8px;
   animation: text-flicker 3s linear infinite;
   word-break: break-word; 
 }

@@ -38,11 +38,27 @@ class AboutMe extends React.Component {
 
   render() {
     const { aboutMeText, endAboutMeText } = this.state;
+    let aboutMeTextStyle;;
+    
+    if (endAboutMeText) {
+      if (isMobile) {
+        aboutMeTextStyle = mobileStyles.aboutMeMainTextFin;
+      } else {
+        aboutMeTextStyle = styles.aboutMeMainTextFin;
+      }
+    } else {
+      if (isMobile) {
+        aboutMeTextStyle = mobileStyles.aboutMeMainText;
+      } else {
+        aboutMeTextStyle = styles.aboutMeMainText;
+      }
+    }
+
     return (
       <div className={styles.aboutMeDiv}>
         <img className={styles.aboutImage} src={aboutMeBackgroundImage}/>
         <div className={isMobile ? mobileStyles.aboutMeWholeDiv : styles.aboutMeWholeDiv}>
-          <div className={isMobile ? mobileStyles.aboutMeMainText : styles.aboutMeMainText}>
+          <div className={aboutMeTextStyle}>
             <span className={styles.aboutMeMyNameText}>
               {aboutMeText}
             </span>
